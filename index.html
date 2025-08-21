@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       type="module"
@@ -14,30 +15,59 @@
     ></script>
     <title>Home</title>
   </head>
-  <body>
+  <body class="bg-[#f8f8f8]">
     <header class="bg-white shadow-lg">
-      <nav class=" w-[95%] py-4 mx-auto">
+      <nav class="w-[95%] py-2 mx-auto">
         <div class="w-full flex justify-end md:hidden">
-            <ion-icon
-              name="menu-outline"
-              class="text-black text-3xl cursor-pointer md:hidden"
-              onclick="onToggleMenu(this)"
-            ></ion-icon>
+          <ion-icon
+            name="menu-outline"
+            class="text-black text-3xl cursor-pointer md:hidden"
+            onclick="onToggleMenu(this)"
+          ></ion-icon>
         </div>
-        <ul class="nav-links md:flex flex md:flex-row flex-col md:items-center md:justify-end items-start gap-[0.7rem] md:gap-[2rem] hidden">
-            <li><a href="#" class="flex items-center gap-[0.2rem]"><ion-icon name="home-outline"></ion-icon>Home</a></li>
-            <li><a href="#" class="flex items-center gap-[0.2rem]"><ion-icon name="list-outline"></ion-icon>Categories</a></li>
-            <li><a href="#" class="flex items-center gap-[0.2rem]"><ion-icon name="globe-outline"></ion-icon>Areas</a></li>
-            <li><ion-icon name="moon-outline" class="cursor-pointer"></ion-icon></li>
+        <ul
+          class="nav-links md:flex flex md:flex-row flex-col md:items-center md:justify-end items-start gap-[0.7rem] md:gap-[2rem] hidden"
+        >
+          <li>
+            <a href="#" class="flex items-center gap-[0.2rem]"
+              ><ion-icon name="home-outline"></ion-icon>Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-[0.2rem]"
+              ><ion-icon name="list-outline"></ion-icon>Categories</a
+            >
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-[0.2rem]"
+              ><ion-icon name="globe-outline"></ion-icon>Areas</a
+            >
+          </li>
+          <!-- <li>
+            <ion-icon name="moon-outline" class="cursor-pointer"></ion-icon>
+          </li> -->
         </ul>
       </nav>
     </header>
+    <section class="hero-section px-[5%] flex flex-col items-center gap-[3rem]">
+      <div class="main-content">
+        <h1 class="md:text-[3rem] text-[2.1rem] font-bold text-center mt-5">Discover Amazing Recipes</h1>
+        <h4 class="text-[1rem] text-center">
+          From comfort food to gourmet cuisine, find your next favorite dish
+        </h4>
+        </div>
+        <div class="search-section flex flex-row  gap-3 w-full justify-center ">
+            <input type="text" class="bg-[#fdfdfd] shadow-lg px-[20px] rounded-[20px] w-full max-w-[450px] md:w-[450px] h-[30px] outline-none" placeholder="Search for recipes...">
+            <button class="bg-[#fdfdfd] shadow-lg rounded-full px-[20px]  w-100px  md:w-[100px] h-[30px] hover:scale-105">Search</button>
+        </div>
+      
+    </section>
     <script>
-        function onToggleMenu(e){
-            e.name = e.name === 'menu-outline' ? 'close-outline' : 'menu-outline';
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('hidden');
-        }
+      function onToggleMenu(e) {
+        e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("hidden");
+      }
     </script>
   </body>
 </html>
