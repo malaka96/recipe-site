@@ -13,9 +13,9 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <title>Home</title>
+    <title>Categories</title>
   </head>
-  <body class="bg-[#f8f8f8]">
+  <body>
     <header class="bg-white shadow-lg">
       <nav class="w-[95%] py-2 mx-auto">
         <div class="w-full flex justify-end md:hidden">
@@ -52,44 +52,16 @@
 
     <section class="hero-section px-[5%] flex flex-col items-center gap-[3rem]">
       <div class="main-content">
-        <h1 class="md:text-[3rem] text-[2.1rem] font-bold text-center mt-5">
-          Discover Amazing Recipes
+        <h1 class="md:text-[2rem] text-[1.8rem] font-bold text-center mt-5">
+          Browse Categories
         </h1>
         <h4 class="text-[1rem] text-center">
-          From comfort food to gourmet cuisine, find your next favorite dish
+          Discover recipes organized by cuisine type and dish category
         </h4>
       </div>
-      <div class="search-section flex flex-row gap-3 w-full justify-center">
-        <input
-          type="text"
-          class="bg-[#fdfdfd] shadow-lg px-[20px] rounded-[20px] w-full max-w-[450px] md:w-[450px] h-[30px] outline-none"
-          placeholder="Search for recipes..."
-        />
-        <button
-          class="bg-[#fdfdfd] shadow-lg rounded-full px-[20px] w-100px md:w-[100px] h-[30px] hover:scale-105"
-        >
-          Search
-        </button>
-      </div>
     </section>
 
-    <section class="filter-section flex flex-row px-[5%] gap-5 mt-[3rem]">
-      <div class="filter-icon-section flex flex-row items-center gap-[10px]">
-        <ion-icon name="funnel-outline" class="m-0"></ion-icon>
-        <p class="m-0 font-normal">Filters:</p>
-      </div>
-      <div class="chips flex flex-row flex-wrap">
-        <div class="chip">
-          <p>Chicken</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-main-content-section px-[5%] mt-[2rem]">
-      <div class="title flex flex-row justify-between">
-        <h2 class="text-xl mb-3 font-semibold">Featured Recipes</h2>
-        <p class="m-0">2943 recipes found</p>
-      </div>
+    <section class="categories-main-content-section px-[5%] mt-[2rem]">
       <div class="cards flex justify-center flex-wrap md:justify-start gap-5">
         <div class="custom-card">
           <img src="assets/images/chicken-biriyani.webp" alt="Card Image" />
