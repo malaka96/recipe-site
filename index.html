@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       type="module"
@@ -51,17 +51,39 @@
     </header>
     <section class="hero-section px-[5%] flex flex-col items-center gap-[3rem]">
       <div class="main-content">
-        <h1 class="md:text-[3rem] text-[2.1rem] font-bold text-center mt-5">Discover Amazing Recipes</h1>
+        <h1 class="md:text-[3rem] text-[2.1rem] font-bold text-center mt-5">
+          Discover Amazing Recipes
+        </h1>
         <h4 class="text-[1rem] text-center">
           From comfort food to gourmet cuisine, find your next favorite dish
         </h4>
-        </div>
-        <div class="search-section flex flex-row  gap-3 w-full justify-center ">
-            <input type="text" class="bg-[#fdfdfd] shadow-lg px-[20px] rounded-[20px] w-full max-w-[450px] md:w-[450px] h-[30px] outline-none" placeholder="Search for recipes...">
-            <button class="bg-[#fdfdfd] shadow-lg rounded-full px-[20px]  w-100px  md:w-[100px] h-[30px] hover:scale-105">Search</button>
-        </div>
-      
+      </div>
+      <div class="search-section flex flex-row gap-3 w-full justify-center">
+        <input
+          type="text"
+          class="bg-[#fdfdfd] shadow-lg px-[20px] rounded-[20px] w-full max-w-[450px] md:w-[450px] h-[30px] outline-none"
+          placeholder="Search for recipes..."
+        />
+        <button
+          class="bg-[#fdfdfd] shadow-lg rounded-full px-[20px] w-100px md:w-[100px] h-[30px] hover:scale-105"
+        >
+          Search
+        </button>
+      </div>
     </section>
+
+    <section class="filter-section flex flex-row px-[5%] gap-5 mt-[3rem]">
+      <div class="filter-icon-section flex flex-row items-center gap-[10px]">
+        <ion-icon name="funnel-outline" class="m-0"></ion-icon>
+        <p class="m-0 font-normal">Filters: </p>
+      </div>
+      <div class="chips">
+        <div class="chip">
+          <p>Chicken</p>
+        </div>
+      </div>
+    </section>
+
     <script>
       function onToggleMenu(e) {
         e.name = e.name === "menu-outline" ? "close-outline" : "menu-outline";

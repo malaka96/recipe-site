@@ -1,0 +1,13 @@
+.chip{
+    display: inline-block;
+    padding: 5px 9px 5px 9px;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 12px;
+    font-size: 0.7rem;
+    color: rgb(85, 85, 85);
+}
+
+.chip:hover{
+    cursor: pointer;
+    background-color: rgb(225, 225, 225);
+}
