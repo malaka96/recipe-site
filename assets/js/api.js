@@ -34,3 +34,25 @@ export async function getRecipeById(id){
         return [];
     }
 }
+
+export async function getAllCategories(){
+  try{
+    const res = await fetch(`${BASE_URL}/categories.php`);
+    const data = await res.json();
+    return data.categories || [];
+  }catch(e){
+    console.error(`error fetching categories ${e}`);
+    return [];
+  }
+}
+
+export async function filterByCategory(category){
+  try{
+    const res = await fetch(`${BASE_URL}/filter.php?c=${category}`);
+    const data = await res.json();
+    return data.meals || [];
+  }catch(e){
+    console.error(`error fetching category date ${e}`);
+    return [];
+  }
+}
