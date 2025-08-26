@@ -40,7 +40,7 @@ showFilters();
 const cardsHolder = document.querySelector(".cards");
 async function allToHome() {
   const cacheKey = 'allRecipesCache';
-  const cacheTTL = 1000 * 60 * 60; 
+  const cacheTTL = 1000 * 60 * 60 * 24 * 30;
 
   const cached = localStorage.getItem(cacheKey);
   const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
