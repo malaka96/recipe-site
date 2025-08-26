@@ -39,8 +39,15 @@ async function getEachCategoryData(name) {
     card.appendChild(image);
     card.appendChild(card_content);
 
+    card.addEventListener('click', () => getRecipe(recipe.idMeal));
+
     cardsHolder.appendChild(card);
   });
 }
 
 getEachCategoryData(categoryName);
+
+function getRecipe(id){
+  console.log('id');
+  window.location.href = `recipe.html?id=${id}`;
+}

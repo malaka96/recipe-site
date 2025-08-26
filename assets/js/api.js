@@ -27,7 +27,6 @@ export async function getRecipeById(id){
     try{
         const res = await fetch(`${BASE_URL}/lookup.php?i=${id}`);
         const data = await res.json();
-        console.log(data.meals);
         return data.meals || [];
     }catch(e){
         console.error(`error fetching recipe by id ${e}`);
@@ -53,6 +52,39 @@ export async function filterByCategory(category){
     return data.meals || [];
   }catch(e){
     console.error(`error fetching category date ${e}`);
+    return [];
+  }
+}
+
+export async function searchMeal(query){
+  try{
+    const res = await fetch(`${BASE_URL}/search.php?s=${query}`);
+    const data = await res.json();
+    return data.meals || [];
+  }catch(e){
+    console.error(`error fetching search meal ${e}`);
+    return []; 
+  }
+}
+
+export async function getAllAreas(){
+  try{
+    const res = await fetch(`${BASE_URL}/list.php?a=list`);
+    const data = await res.json();
+    return data.meals || [];
+  }catch(e){
+    console.error(`error fetching getting areas ${e}`);
+    return [];
+  }
+}
+
+export async function filterByArea(area){
+  try{
+    const res = await fetch(`${BASE_URL}/filter.php?a=${area}`);
+    const data = await res.json();
+    return data.meals || [];
+  }catch(e){
+    console.error(`error fetching recipes by area ${e}`);
     return [];
   }
 }

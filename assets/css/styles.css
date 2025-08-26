@@ -1,15 +1,21 @@
 .chip {
   display: inline-block;
   padding: 5px 9px 5px 9px;
+  margin: 3px;
   border: 1px solid rgb(205, 205, 205);
   border-radius: 12px;
   font-size: 0.7rem;
   color: rgb(85, 85, 85);
 }
 
+.clicked{
+  background-color: rgb(225, 225, 225);
+}
+
 .chip:hover {
   cursor: pointer;
   background-color: rgb(225, 225, 225);
+  transform: scale(1.08);
 }
 
 .custom-card {
